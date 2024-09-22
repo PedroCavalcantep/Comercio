@@ -17,14 +17,15 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import fx.comercio.Session;
 
 public class LoginController {
 
     @FXML
-    private TextField loginField; // Campo de login
+    private TextField loginField;
 
     @FXML
-    private TextField senhaField; // Campo de senha
+    private TextField senhaField;
 
     @FXML
     private Text loginErro;
@@ -38,17 +39,15 @@ public class LoginController {
         String userName = realizarLogin(login, senha);
 
         if (userName != null) {
+            Session.setUsuario(userName);
 
             FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("/fx/comercio/Menu.fxml")));
             Parent segundaPagina = loader.load();
 
-
             MenuController menuController = loader.getController();
-
             menuController.setUserName(userName);
 
-
-            Scene segundaCena = new Scene(segundaPagina, 800, 600);
+            Scene segundaCena = new Scene(segundaPagina, 1280, 720);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(segundaCena);
             stage.show();
@@ -70,7 +69,7 @@ public class LoginController {
         if (responseCode == HttpURLConnection.HTTP_OK) {
             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
             String inputLine;
-            StringBuffer response = new StringBuffer();
+            StringBuilder response = new StringBuilder();
 
             while ((inputLine = in.readLine()) != null) {
                 response.append(inputLine);

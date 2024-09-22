@@ -7,6 +7,7 @@ module fx.comercio {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires com.fasterxml.jackson.databind;
+    requires java.net.http;
 
     opens fx.comercio to javafx.fxml;
     exports fx.comercio;

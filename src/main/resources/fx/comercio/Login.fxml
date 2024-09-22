@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.VBox?>
-<?import org.kordamp.bootstrapfx.BootstrapFX?>
-
-
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.TextField?>
+
+
+
 <FlowPane alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
           fx:controller="fx.comercio.controllers.LoginController" styleClass="bg-blue">
     <VBox spacing="15" alignment="BASELINE_CENTER">
         <HBox spacing="15" alignment="BASELINE_RIGHT">
-            <Label text="Login:" styleClass="b"/>
-            <TextField fx:id="loginField" styleClass="form-control" prefWidth="200" />
+            <Label text="Login:" styleClass="b" style="-fx-font-size: 20"/>
+            <TextField fx:id="loginField" styleClass="form-control" prefWidth="200"  />
         </HBox>
         <HBox spacing="15" alignment="BASELINE_RIGHT">
-            <Label text="Senha:" styleClass="b"/>
+            <Label text="Senha:" styleClass="b" style="-fx-font-size: 20"/>
             <TextField fx:id="senhaField" styleClass="form-control"  prefWidth="200" />
         </HBox>
     <Button text="Entrar" onAction="#abrirMenu" styleClass="btn-primary, w-40" maxWidth="100"/>
-    <Text fx:id="loginErro" styleClass="text-danger"></Text>
+    <Text fx:id="loginErro" styleClass="text-danger" > </Text>
     </VBox>
-
-
 </FlowPane>

@@ -12,7 +12,7 @@ public class Application extends javafx.application.Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("Login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         stage.setTitle("Login");
         stage.setScene(scene);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
