@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Text?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="fx.comercio.controllers.MenuController">
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22.0.1" fx:controller="fx.comercio.controllers.MenuController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
-    <Text fx:id="userText">teste</Text>
-    <Button onAction="#abrirProdutos" styleClass="btn-primary">Produtos</Button>
-</VBox>
 
+    <Text text="ADMINISTRAR" style="-fx-font-size: 36px; -fx-font-weight: bold;" />
+
+    <HBox alignment="CENTER" spacing="50.0">
+        <VBox alignment="CENTER" spacing="10.0">
+            <Button fx:id="btnProdutos" onAction="#abrirProdutos" style="-fx-font-size: 18px; -fx-background-color: #4292f5; -fx-text-fill: white; -fx-pref-width: 150px; -fx-pref-height: 150px;">
+                Produtos
+            </Button>
+            <Text text="Produtos" style="-fx-font-size: 18px;" />
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="10.0">
+            <Button style="-fx-font-size: 18px; -fx-background-color: #4292f5; -fx-text-fill: white; -fx-pref-width: 150px; -fx-pref-height: 150px;">
+                Usuários
+            </Button>
+            <Text text="Usuários" style="-fx-font-size: 18px;" />
+        </VBox>
+    </HBox>
+</VBox>

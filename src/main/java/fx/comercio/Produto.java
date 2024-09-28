@@ -1,29 +1,42 @@
 package fx.comercio;
 
 public class Produto {
-    private int codProd;
+    private String codProd;
     private String descricao;
     private double precoCompra;
     private double precoVenda;
     private String codBarra;
     private String ncm;
+    private int qtd;
 
+    // Construtor padrão
+    public Produto() {
+    }
 
-
-    public Produto(int codProd, String descricao, double precoCompra, double precoVenda, String codBarra) {
+    // Construtor existente
+    public Produto(String codProd, String descricao, double precoCompra, double precoVenda, String codBarra, String ncm, int qtd) {
         this.codProd = codProd;
         this.descricao = descricao;
         this.precoCompra = precoCompra;
         this.precoVenda = precoVenda;
         this.codBarra = codBarra;
+        this.ncm = ncm;
+        this.qtd = qtd;
     }
 
+    // Novo construtor que você precisa
+    public Produto(String descricao, double precoCompra, double precoVenda) {
+        this.descricao = descricao;
+        this.precoCompra = precoCompra;
+        this.precoVenda = precoVenda;
+    }
 
-    public int getCodProd() {
+    // Getters e Setters (se necessário)
+    public String getCodProd() {
         return codProd;
     }
 
-    public void setCodProd(int codProd) {
+    public void setCodProd(String codProd) {
         this.codProd = codProd;
     }
 
@@ -65,5 +78,13 @@ public class Produto {
 
     public void setNcm(String ncm) {
         this.ncm = ncm;
+    }
+
+    public int getQtd() {
+        return qtd;
+    }
+
+    public void setQtd(int qtd) {
+        this.qtd = qtd;
     }
 }

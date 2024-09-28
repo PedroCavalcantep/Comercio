@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.comercio.controllers.ProdutoController">
+<Text>teste</Text>
+<!--    <Label text="Cadastrar Produto" style="-fx-font-size: 20px; -fx-text-fill: #007BFF;"-->
+<!--           AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0"/>-->
+
+<!--    <Label text="Descrição:" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="10.0"/>-->
+<!--    <TextField fx:id="descricaoField" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="120.0"-->
+<!--               prefWidth="200.0"/>-->
+
+<!--    <Label text="Preço Compra:" AnchorPane.topAnchor="90.0" AnchorPane.leftAnchor="10.0"/>-->
+<!--    <TextField fx:id="precoCompraField" AnchorPane.topAnchor="90.0" AnchorPane.leftAnchor="120.0"-->
+<!--               prefWidth="200.0"/>-->
+
+<!--    <Label text="Preço Venda:" AnchorPane.topAnchor="130.0" AnchorPane.leftAnchor="10.0"/>-->
+<!--    <TextField fx:id="precoVendaField" AnchorPane.topAnchor="130.0" AnchorPane.leftAnchor="120.0"-->
+<!--               prefWidth="200.0"/>-->
+
+<!--    <Button text="Cadastrar" onAction="#onCadastrar" AnchorPane.topAnchor="180.0"-->
+<!--            AnchorPane.leftAnchor="150.0"/>-->
+</AnchorPane>
